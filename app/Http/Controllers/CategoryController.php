@@ -9,7 +9,7 @@ class CategoryController extends Controller
     public function AddCategory(){
         return view('admin.category.add-category');
     }
-    public function NewCategory(Request $request){
+    public function storeCategory(Request $request){
         $category = new Category();
         $category->category_name = $request->category_name;
         $category->category_description = $request->category_description;

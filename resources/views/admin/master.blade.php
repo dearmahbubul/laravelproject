@@ -38,7 +38,8 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <!-- ckeditor -->
+    <script src="{{ asset('/') }}admin/ckeditor/ckeditor.js"></script>
 </head>
 
 <body>
@@ -95,11 +96,17 @@
 <!-- Custom Theme JavaScript -->
 <script src="{{ asset('/') }}admin/dist/js/sb-admin-2.js"></script>
 
+
 <!-- Page-Level Demo Scripts - Tables - Use for reference -->
 <script>
     $(document).ready(function() {
         $('#dataTables-example').DataTable({
             responsive: true
+        });
+    });
+    $(document).ready(function() {
+        $('.alert').delay(2000).slideUp(1500,function () {
+            $(this).alert('close');
         });
     });
 </script>

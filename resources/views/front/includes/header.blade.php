@@ -44,7 +44,7 @@
                             <ul class="nav navbar-nav">
                                 <li class="active"><a href="{{ url('/') }}/" class="act">Home</a></li>
                                 <!-- Mega Menu -->
-                                <li class="dropdown">
+                                {{--<li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Women<b class="caret"></b></a>
                                     <ul class="dropdown-menu multi-column columns-3">
                                         <div class="row">
@@ -115,7 +115,10 @@
                                             <div class="clearfix"></div>
                                         </div>
                                     </ul>
-                                </li>
+                                </li>--}}
+                                @foreach($categoryList as $category)
+                                <li><a href="url('/category')">{{$category->category_name}}</a></li>
+                                @endforeach
                                 <li><a href="codes.html">Short Codes</a></li>
                                 <li><a href="mail.html">Mail Us</a></li>
                             </ul>

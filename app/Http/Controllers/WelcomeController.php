@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Product;
 use Illuminate\Http\Request;
 
 class WelcomeController extends Controller
@@ -13,7 +14,8 @@ class WelcomeController extends Controller
      */
     public function index()
     {
-        return view('front.home.home-content');
+        $products = Product::where('publication_status',1)->orderby('id','desc')->skip(0)->take(4)->get();
+        return view('front.home.home-content',compact('products'));
     }
     public function about(){
 

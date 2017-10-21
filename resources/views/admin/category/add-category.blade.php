@@ -3,9 +3,13 @@
     <br>
     <div class="row">
         <div class="col-sm-12">
-            {{ Session::get('message') }}
+            <div class="col-lg-12 text-center">
+                @if($message = Session::get('message'))
+                    <p class="alert" style="background-color: #61d864;padding:7px;color:#fff;">{{ $message }}</p>
+                @endif
+            </div>
             <div class="well">
-                <form action="{{ url('/new-category') }}" method="POST" class="form-horizontal">
+                <form action="{{ url('/store-category') }}" method="POST" class="form-horizontal">
                     {{ csrf_field() }}
                     <div class="form-group">
                         <label for="" class="col-sm-3">Category Name</label>

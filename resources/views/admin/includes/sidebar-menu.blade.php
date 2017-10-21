@@ -27,7 +27,31 @@
                 </ul>
                 <!-- /.nav-second-level -->
             </li>
-      
+            <li>
+                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Brand<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="{{ url('/add-brand') }}">Add Brand</a>
+                    </li>
+                    <li>
+                        <a href="{{ url('/manage-brand') }}">Manage Brand</a>
+                    </li>
+                </ul>
+                <!-- /.nav-second-level -->
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Product<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="{{ url('/add-product') }}">Add Product</a>
+                    </li>
+                    <li>
+                        <a href="{{ url('/manage-product') }}">Manage Product</a>
+                    </li>
+                </ul>
+                <!-- /.nav-second-level -->
+            </li>
+
 
             <li>
                 <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>

@@ -103,16 +103,17 @@
             <div class="container">
                 <h2 class="tittle">New Arrivals</h2>
                 <div class="arrivals-grids">
+                    @foreach($products as $product)
                     <div class="col-md-3 arrival-grid simpleCart_shelfItem">
                         <div class="grid-arr">
                             <div  class="grid-arrival">
                                 <figure>
                                     <a href="#" class="new-gri" data-toggle="modal" data-target="#myModal1">
                                         <div class="grid-img">
-                                            <img  src="{{ asset('/front') }}/images/p6.jpg" class="img-responsive" alt="">
+                                            <img  src="{{ $product->product_image }}" class="img-responsive" alt="">
                                         </div>
                                         <div class="grid-img">
-                                            <img  src="{{ asset('/front') }}/images/p5.jpg" class="img-responsive"  alt="">
+                                            <img  src="{{ $product->product_image  }}" class="img-responsive"  alt="">
                                         </div>
                                     </a>
                                 </figure>
@@ -127,14 +128,15 @@
                                 <div class="starbox small ghosting"> </div>
                             </div>
                             <div class="women">
-                                <h6><a href="single.html">Sed ut perspiciatis unde</a></h6>
+                                <h6><a href="single.html">{{ $product->product_name }}</a></h6>
                                 <span class="size">XL / XXL / S </span>
                                 <p ><del>$100.00</del><em class="item_price">$70.00</em></p>
                                 <a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 arrival-grid simpleCart_shelfItem">
+                    @endforeach
+                    {{--<div class="col-md-3 arrival-grid simpleCart_shelfItem">
                         <div class="grid-arr">
                             <div  class="grid-arrival">
                                 <figure>
@@ -214,7 +216,7 @@
                                 <a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
                             </div>
                         </div>
-                    </div>
+                    </div>--}}
                     <div class="clearfix"></div>
                 </div>
             </div>
